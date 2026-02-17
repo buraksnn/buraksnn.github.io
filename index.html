@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burak Senyerli | Çok Yakında</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* Sayfa sıfırlama ve temel ayarlar */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto Mono', monospace; /* Kodlama fontu */
+            background-color: #000000; /* Simsiyah arka plan */
+            color: #ffffff;
+            overflow: hidden; /* Kaydırma çubuklarını gizle */
+        }
+
+        /* İçeriği tam ortayalayan kapsayıcı */
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 2; /* Efektin üzerinde kalsın */
+            position: relative;
+        }
+
+        /* İsim başlığı */
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        /* Dinamik "Çok Yakında" yazısı */
+        .status {
+            font-size: 1.2rem;
+            color: #888; /* Biraz daha sönük başlasın */
+            letter-spacing: 1px;
+            /* Nefes alma (Glow) animasyonu */
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        /* Animasyonun tanımı (CSS Keyframes) */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff88;
+                color: #fff;
+            }
+            to {
+                text-shadow: 0 0 2px #fff, 0 0 5px #888;
+                color: #888;
+            }
+        }
+
+        /* Arka plandaki ince dijital çizgiler (İsteğe bağlı dinamiklik) */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 255, 136, 0.02) 51%
+            );
+            background-size: 100% 4px;
+            z-index: 1;
+            pointer-events: none; /* Tıklamayı engellemesin */
+        }
+        
+        /* Alt kısımdaki küçük linkler */
+        .footer-links {
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #00ff88; /* Üzerine gelince neon yeşil olsun */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div class="container">
+        <h1>BURAK SENYERLİ</h1>
+        <p class="status">// ÇOK YAKINDA //</p>
+
+        <div class="footer-links">
+            <a href="https://instagram.com/buraksn" target="_blank">Instagram</a>
+            <span>|</span>
+            <a href="#" target="_blank">Spotify</a>
+        </div>
+    </div>
+</body>
+</html>
