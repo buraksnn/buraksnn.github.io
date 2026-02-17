@@ -17,6 +17,48 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://buraksenyerli.com">
     
+    <!-- FAQ Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Burak Şen Yerli kimdir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buraya kendi açıklamanızı yazın."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Burak Şen Yerli kaç yaşında?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buraya yaş bilginizi yazın."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Burak Şen Yerli nerede yaşıyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buraya konum bilginizi yazın."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Burak Şen Yerli ne iş yapıyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buraya meslek bilginizi yazın."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,31 +87,6 @@
             background: var(--bg-dark);
             color: var(--text-primary);
             overflow-x: hidden;
-            cursor: none;
-        }
-        
-        /* Custom Cursor */
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--accent-1);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s ease, border-color 0.3s ease;
-            mix-blend-mode: difference;
-        }
-        
-        .cursor-follower {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-1);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9998;
-            transition: transform 0.15s ease;
         }
         
         /* Animated Gradient Background */
@@ -419,6 +436,108 @@
             font-weight: 600;
         }
         
+        /* FAQ Section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-header h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .faq-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+        
+        .faq-question {
+            padding: 1.8rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .faq-question h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--accent-1);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 2rem 2rem;
+        }
+        
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
         /* Social Links */
         .social-links {
             display: flex;
@@ -486,14 +605,6 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                cursor: auto;
-            }
-            
-            .cursor, .cursor-follower {
-                display: none;
-            }
-            
             .nav-menu {
                 gap: 1.5rem;
             }
@@ -510,6 +621,10 @@
             
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .faq-question h3 {
+                font-size: 1rem;
             }
         }
         
@@ -529,10 +644,6 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
     <!-- Gradient Background -->
     <div class="gradient-bg"></div>
     
@@ -548,6 +659,7 @@
             <ul class="nav-menu">
                 <li><a href="#about">Hakkımda</a></li>
                 <li><a href="#work">Çalışmalar</a></li>
+                <li><a href="#faq">SSS</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
         </nav>
@@ -562,7 +674,7 @@
             </div>
         </section>
         
-        <!-- Bento Grid -->
+        <!-- Bento Grid - About -->
         <section id="about">
             <div class="bento-grid">
                 <!-- Large Card -->
@@ -636,6 +748,76 @@
             </div>
         </section>
         
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="faq-header">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Hakkımda merak edilenler</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli kimdir?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya kendi tanıtımınızı yazabilirsiniz. Kendinizi tanıtan, geçmişiniz ve ilgi alanlarınız hakkında bilgi veren bir açıklama ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli kaç yaşında?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya yaş bilginizi ve doğum yılınızı ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli nerede yaşıyor?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya yaşadığınız şehir ve ülke bilgisini ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli ne iş yapıyor?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya mesleğiniz, çalıştığınız alan ve uzmanlık alanlarınız hakkında bilgi ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli hangi üniversitede okudu?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya eğitim geçmişinizi, üniversite ve bölüm bilgilerinizi ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Burak Şen Yerli ile nasıl iletişime geçebilirim?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Buraya iletişim yöntemlerinizi, e-posta adresinizi veya sosyal medya hesaplarınızı ekleyebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Contact Section -->
         <section id="contact">
             <div class="bento-grid">
@@ -666,48 +848,6 @@
     </div>
     
     <script>
-        // Custom Cursor
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        let mouseX = 0, mouseY = 0;
-        let followerX = 0, followerY = 0;
-        
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
-        });
-        
-        function animateFollower() {
-            const distX = mouseX - followerX;
-            const distY = mouseY - followerY;
-            
-            followerX += distX * 0.1;
-            followerY += distY * 0.1;
-            
-            cursorFollower.style.transform = `translate(${followerX - 4}px, ${followerY - 4}px)`;
-            
-            requestAnimationFrame(animateFollower);
-        }
-        
-        animateFollower();
-        
-        // Hover effects for cursor
-        const hoverElements = document.querySelectorAll('a, button, .bento-item');
-        hoverElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform += ' scale(1.5)';
-                cursor.style.borderColor = '#ec4899';
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = cursor.style.transform.replace(' scale(1.5)', '');
-                cursor.style.borderColor = '#6366f1';
-            });
-        });
-        
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -724,8 +864,26 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.bento-item').forEach(el => {
+        document.querySelectorAll('.bento-item, .faq-item').forEach(el => {
             observer.observe(el);
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
         });
         
         // Smooth scroll
