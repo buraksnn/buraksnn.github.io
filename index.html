@@ -3,926 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Burak Şenyerli - Kişisel Web Sitesi</title>
-    <meta name="description" content="Burak Şenyerli'nin kişisel web sitesi. Modern tasarım ve özgün içerik.">
-    <meta name="keywords" content="Burak Şenyerli, portfolio, kişisel site">
-    <meta name="author" content="Burak Şenyerli">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Burak Şenyerli">
-    <meta property="og:description" content="Kişisel web sitesi">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://buraksenyerli.com">
-    
-    <!-- FAQ Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Burak Şenyerli kimdir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Buraya kendi açıklamanızı yazın."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Burak Şenyerli kaç yaşında?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Buraya yaş bilginizi yazın."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Burak Şenyerli nerede yaşıyor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Buraya konum bilginizi yazın."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Burak Şenyerli ne iş yapıyor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Buraya meslek bilginizi yazın."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Burak Senyerli | Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /* --- TEMEL AYARLAR --- */
         :root {
-            --bg-dark: #0f0f14;
-            --bg-card: rgba(255, 255, 255, 0.03);
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0aa;
-            --accent-1: #6366f1;
-            --accent-2: #ec4899;
-            --accent-3: #8b5cf6;
-            --accent-4: #14b8a6;
+            --bg-color: #0d0d0d;
+            --text-color: #ffffff;
+            --btn-bg: #1a1a1a;
+            --btn-hover: #ffffff;
+            --btn-text-hover: #000000;
+            --accent: #00ff9d; /* Neon Yeşil Vurgu */
         }
-        
+
         body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            overflow-x: hidden;
-        }
-        
-        /* Animated Gradient Background */
-        .gradient-bg {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
-            animation: gradientMove 20s ease infinite;
-        }
-        
-        @keyframes gradientMove {
-            0%, 100% {
-                transform: scale(1) rotate(0deg);
-            }
-            50% {
-                transform: scale(1.1) rotate(5deg);
-            }
-        }
-        
-        /* Floating Orbs */
-        .orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 15s infinite ease-in-out;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .orb-1 {
-            width: 300px;
-            height: 300px;
-            background: var(--accent-1);
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-        
-        .orb-2 {
-            width: 250px;
-            height: 250px;
-            background: var(--accent-2);
-            top: 60%;
-            right: 20%;
-            animation-delay: 5s;
-        }
-        
-        .orb-3 {
-            width: 200px;
-            height: 200px;
-            background: var(--accent-3);
-            bottom: 10%;
-            left: 50%;
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0);
-            }
-            33% {
-                transform: translate(50px, 50px);
-            }
-            66% {
-                transform: translate(-30px, 30px);
-            }
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 0;
-            animation: fadeInDown 0.8s ease;
-        }
-        
-        .logo {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.03em;
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-        
-        .nav-menu a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-menu a::before {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: var(--accent-1);
-            border-radius: 50%;
-            left: -12px;
-            top: 50%;
-            transform: translateY(-50%) scale(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .nav-menu a:hover {
-            color: var(--text-primary);
-        }
-        
-        .nav-menu a:hover::before {
-            transform: translateY(-50%) scale(1);
-        }
-        
-        /* Hero */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(3rem, 10vw, 7rem);
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.04em;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-        
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            line-height: 1.7;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-        
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            color: white;
-            border: none;
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
-            transition: left 0.3s ease;
-        }
-        
-        .btn-primary:hover::before {
-            left: 0;
-        }
-        
-        .btn-primary span {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .btn-secondary {
-            background: var(--bg-card);
-            color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--accent-1);
-        }
-        
-        /* Bento Grid */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 4rem 0;
-            grid-auto-rows: 280px;
-        }
-        
-        .bento-item {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            padding: 2.5rem;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        .bento-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .bento-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        .bento-item:hover::before {
-            opacity: 1;
-        }
-        
-        .bento-item:hover {
-            transform: translateY(-8px);
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
-        }
-        
-        .bento-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        
-        .bento-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.5));
-        }
-        
-        .bento-item h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .bento-item p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-        
-        .bento-label {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--accent-1);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-family: 'Syne', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            margin: 4rem 0;
-        }
-        
-        .faq-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .faq-header h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-        }
-        
-        .faq-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        .faq-grid {
-            display: grid;
-            gap: 1.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .faq-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .faq-item:hover {
-            border-color: rgba(99, 102, 241, 0.2);
-        }
-        
-        .faq-question {
-            padding: 1.8rem 2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-            transition: background 0.3s ease;
-        }
-        
-        .faq-question:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-        
-        .faq-question h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-primary);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-        }
-        
-        .faq-icon {
-            font-size: 1.5rem;
-            color: var(--accent-1);
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-        
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 0 2rem 2rem 2rem;
-        }
-        
-        .faq-answer p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            font-size: 1rem;
-        }
-        
-        /* Social Links */
-        .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            min-height: 100vh;
+            /* Arka plan için hafif bir gradient */
+            background-image: radial-gradient(circle at top center, #1f1f1f 0%, #0d0d0d 60%);
         }
-        
-        .social-link:hover {
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            transform: translateY(-4px);
-            border-color: transparent;
-        }
-        
-        /* Footer */
-        footer {
+
+        .container {
+            width: 100%;
+            max-width: 680px; /* Linktree standardı */
+            padding: 40px 20px;
             text-align: center;
-            padding: 4rem 0 2rem;
-            margin-top: 6rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        
-        footer p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+
+        /* --- PROFİL KISMI --- */
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 2px solid #333;
+            /* Buraya kendi resminin linkini koyabilirsin */
+            background-image: url('https://avatars.githubusercontent.com/u/9919?s=200&v=4'); 
+            background-size: cover;
         }
-        
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
         }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        p {
+            font-size: 14px;
+            color: #888;
+            margin: 0 0 32px 0;
+            line-height: 1.5;
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                gap: 1.5rem;
-            }
+
+        /* --- BUTONLAR (Linktree Tarzı) --- */
+        .link-btn {
+            display: flex; /* İkon ve yazıyı hizalamak için */
+            align-items: center;
+            justify-content: center; /* Yazıyı ortala */
+            position: relative;
             
-            .bento-grid {
-                grid-template-columns: 1fr;
-                grid-auto-rows: auto;
-            }
+            width: 100%;
+            padding: 18px 20px;
+            margin-bottom: 16px;
             
-            .bento-large {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            text-decoration: none;
             
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            border-radius: 30px; /* Yuvarlak köşeler */
+            border: 1px solid #333;
             
-            .faq-question h3 {
-                font-size: 1rem;
-            }
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
+            
+            /* Mobilde dokunma hissi için */
+            user-select: none; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .link-btn:hover {
+            background-color: var(--btn-hover);
+            color: var(--btn-text-hover);
+            transform: scale(1.02); /* Hafif büyüme */
+            border-color: var(--btn-hover);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Buton içindeki ikon */
+        .link-btn i {
+            position: absolute;
+            left: 20px;
+            font-size: 20px;
+        }
+
+        /* Öne Çıkan Buton (Örn: Yeni Şarkı) */
+        .featured {
+            background-color: var(--accent);
+            color: #000;
+            border: none;
+            animation: pulse 2s infinite;
+        }
+        .featured:hover {
+            background-color: #00cc7d;
+            color: #000;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 157, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 157, 0); }
+        }
+
+        /* --- ALT KISIM (Sosyal İkonlar) --- */
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: #888;
+            font-size: 24px;
+            transition: color 0.3s;
         }
         
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
+        .social-icons a:hover {
+            color: var(--text-color);
         }
-        
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
-            border-radius: 10px;
+
+        /* Logo/Footer */
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #444;
         }
     </style>
 </head>
 <body>
-    <!-- Gradient Background -->
-    <div class="gradient-bg"></div>
-    
-    <!-- Floating Orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    
+
     <div class="container">
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">BSY</div>
-            <ul class="nav-menu">
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#work">Çalışmalar</a></li>
-                <li><a href="#faq">SSS</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </nav>
+        <img src="https://via.placeholder.com/150" alt="Burak Senyerli" class="profile-img">
         
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Burak Şenyerli</h1>
-            <p>Yaratıcılık, teknoloji ve tasarım kesişiminde çalışan bir dijital yaratıcı. Modern çözümler üretiyorum.</p>
-            <div class="cta-buttons">
-                <a href="#work" class="btn btn-primary"><span>Çalışmalarımı İncele</span></a>
-                <a href="#contact" class="btn btn-secondary">İletişime Geç</a>
-            </div>
-        </section>
-        
-        <!-- Bento Grid - About -->
-        <section id="about">
-            <div class="bento-grid">
-                <!-- Large Card -->
-                <div class="bento-item bento-large">
-                    <span class="bento-label">Hakkımda</span>
-                    <h3>Dijital dünyada iz bırakıyorum</h3>
-                    <p>Yenilikçi projeler geliştirmeyi ve sınırları zorlamayı seven bir dijital yaratıcıyım. Kullanıcı deneyimini ön planda tutarak, estetik ve işlevselliği harmanlıyorum.</p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">27</span>
-                            <span class="stat-label">Yaş</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Proje</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Yıl</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Skills -->
-                <div class="bento-item">
-                    <div class="bento-icon">💻</div>
-                    <h3>Teknoloji</h3>
-                    <p>Modern web teknolojileri ve en güncel araçlarla projeler geliştiriyorum.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">🎨</div>
-                    <h3>Tasarım</h3>
-                    <p>Minimal, etkileyici ve kullanıcı odaklı arayüzler tasarlıyorum.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">🚀</div>
-                    <h3>İnovasyon</h3>
-                    <p>Yaratıcı çözümler üreterek fark yaratmayı hedefliyorum.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">📍</div>
-                    <h3>Konum</h3>
-                    <p>İstanbul, Türkiye'den dünyaya açılıyorum.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Work Section -->
-        <section id="work">
-            <div class="bento-grid">
-                <div class="bento-item bento-large">
-                    <span class="bento-label">Son Projeler</span>
-                    <h3>Üzerinde çalıştığım projeler</h3>
-                    <p>Her proje, yaratıcılığın ve tekniğin buluştuğu bir yolculuk. Kullanıcı deneyimini mükemmelleştirmek için sürekli öğreniyor ve gelişiyorum.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">🎵</div>
-                    <h3>Müzik Yorumlayan AI</h3>
-                    <p>Yapay zeka kullanarak müzikleri analiz eden ve yorumlayan inovatif bir sistem.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">📱</div>
-                    <h3>Sosyal Medya Platformu</h3>
-                    <p>Modern kullanıcı deneyimi odaklı sosyal medya oluşturma projesi.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">🌐</div>
-                    <h3>Web Platformları</h3>
-                    <p>Responsive ve performanslı web uygulamaları.</p>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">⚡</div>
-                    <h3>Mobil Deneyim</h3>
-                    <p>Her cihazda kusursuz kullanıcı deneyimi.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- FAQ Section -->
-        <section id="faq" class="faq-section">
-            <div class="faq-header">
-                <h2>Sıkça Sorulan Sorular</h2>
-                <p>Hakkımda merak edilenler</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli kimdir?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya kendi tanıtımınızı yazabilirsiniz. Kendinizi tanıtan, geçmişiniz ve ilgi alanlarınız hakkında bilgi veren bir açıklama ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli kaç yaşında?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya yaş bilginizi ve doğum yılınızı ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli nerede yaşıyor?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya yaşadığınız şehir ve ülke bilgisini ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli ne iş yapıyor?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya mesleğiniz, çalıştığınız alan ve uzmanlık alanlarınız hakkında bilgi ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli hangi üniversitede okudu?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya eğitim geçmişinizi, üniversite ve bölüm bilgilerinizi ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Burak Şenyerli ile nasıl iletişime geçebilirim?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Buraya iletişim yöntemlerinizi, e-posta adresinizi veya sosyal medya hesaplarınızı ekleyebilirsiniz.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="bento-grid">
-                <div class="bento-item bento-large">
-                    <span class="bento-label">İletişim</span>
-                    <h3>Hadi birlikte bir şeyler yaratalım</h3>
-                    <p>Yeni projeler, iş birlikleri veya sadece merhaba demek için benimle iletişime geçebilirsiniz. Her mesajı yanıtlamaktan mutluluk duyuyorum.</p>
-                    <div class="social-links">
-                        <a href="mailto:hello@buraksenyerli.com" class="social-link" title="Email">📧</a>
-                        <a href="https://github.com/buraksenyerli" target="_blank" class="social-link" title="GitHub">💻</a>
-                        <a href="https://linkedin.com/in/buraksenyerli" target="_blank" class="social-link" title="LinkedIn">💼</a>
-                        <a href="https://twitter.com/buraksenyerli" target="_blank" class="social-link" title="Twitter">🐦</a>
-                    </div>
-                </div>
-                
-                <div class="bento-item">
-                    <div class="bento-icon">✉️</div>
-                    <h3>E-posta</h3>
-                    <p>hello@buraksenyerli.com</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Burak Şenyerli. Tasarım ile yaratıldı.</p>
-        </footer>
+        <h1>@buraksn</h1>
+        <p>Music Producer & Developer<br>Ankara, TR</p>
+
+        <a href="https://spotify.com" target="_blank" class="link-btn featured">
+            <i class="fab fa-spotify"></i>
+            En Yeni Şarkım "Au Revoir" Dinle
+        </a>
+
+        <a href="https://instagram.com/buraksn" target="_blank" class="link-btn">
+            <i class="fab fa-instagram"></i>
+            Instagram
+        </a>
+
+        <a href="https://youtube.com" target="_blank" class="link-btn">
+            <i class="fab fa-youtube"></i>
+            YouTube Kanalım
+        </a>
+
+        <a href="https://soundcloud.com" target="_blank" class="link-btn">
+            <i class="fab fa-soundcloud"></i>
+            SoundCloud
+        </a>
+
+        <a href="https://github.com/buraksnn" target="_blank" class="link-btn">
+            <i class="fab fa-github"></i>
+            GitHub Projelerim
+        </a>
+
+        <a href="mailto:burakksenyerli@gmail.com" class="link-btn">
+            <i class="fas fa-envelope"></i>
+            Bana Mail At
+        </a>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+
+        <div class="footer">
+            © 2026 Burak Senyerli
+        </div>
     </div>
-    
-    <script>
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.bento-item, .faq-item').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(faq => {
-                    faq.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Parallax effect for orbs
-        document.addEventListener('mousemove', (e) => {
-            const orbs = document.querySelectorAll('.orb');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 20;
-                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
-        });
-    </script>
+
 </body>
 </html>
