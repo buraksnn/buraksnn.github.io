@@ -1,206 +1,185 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burak Senyerli | Links</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* --- TEMEL AYARLAR --- */
-        :root {
-            --bg-color: #0d0d0d;
-            --text-color: #ffffff;
-            --btn-bg: #1a1a1a;
-            --btn-hover: #ffffff;
-            --btn-text-hover: #000000;
-            --accent: #00ff9d; /* Neon Yeşil Vurgu */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burak Şenyerli | Links</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-            /* Arka plan için hafif bir gradient */
-            background-image: radial-gradient(circle at top center, #1f1f1f 0%, #0d0d0d 60%);
-        }
+<style>
+:root {
+    --bg: #0e0e10;
+    --text: #ffffff;
+    --subtext: #9ca3af;
+}
 
-        .container {
-            width: 100%;
-            max-width: 680px; /* Linktree standardı */
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        /* --- PROFİL KISMI --- */
-        .profile-img {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 2px solid #333;
-            background-image: url('https://avatars.githubusercontent.com/u/9919?s=200&v=4'); 
-            background-size: cover;
-        }
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1d 0%, #0e0e10 60%);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
 
-        h1 {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            letter-spacing: -0.5px;
-        }
+.container {
+    width: 100%;
+    max-width: 620px;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        p {
-            font-size: 14px;
-            color: #888;
-            margin: 0 0 32px 0;
-            line-height: 1.5;
-        }
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
 
-        /* --- BUTONLAR (Linktree Tarzı) --- */
-        .link-btn {
-            display: flex; /* İkon ve yazıyı hizalamak için */
-            align-items: center;
-            justify-content: center; /* Yazıyı ortala */
-            position: relative;
-            
-            width: 100%;
-            padding: 18px 20px;
-            margin-bottom: 16px;
-            
-            background-color: var(--btn-bg);
-            color: var(--text-color);
-            text-decoration: none;
-            
-            border-radius: 30px; /* Yuvarlak köşeler */
-            border: 1px solid #333;
-            
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
-            
-            /* Mobilde dokunma hissi için */
-            user-select: none; 
-            -webkit-tap-highlight-color: transparent;
-        }
+h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
 
-        .link-btn:hover {
-            background-color: var(--btn-hover);
-            color: var(--btn-text-hover);
-            transform: scale(1.02); /* Hafif büyüme */
-            border-color: var(--btn-hover);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        }
+p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--subtext);
+}
 
-        /* Buton içindeki ikon */
-        .link-btn i {
-            position: absolute;
-            left: 20px;
-            font-size: 20px;
-        }
+/* GENEL BUTON */
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-        /* Öne Çıkan Buton (Örn: Yeni Şarkı) */
-        .featured {
-            background-color: var(--accent);
-            color: #000;
-            border: none;
-            animation: pulse 2s infinite;
-        }
-        .featured:hover {
-            background-color: #00cc7d;
-            color: #000;
-        }
+    width: 100%;
+    padding: 18px;
+    margin-top: 18px;
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 255, 157, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 157, 0); }
-        }
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
 
-        /* --- ALT KISIM (Sosyal İkonlar) --- */
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
+    transition: all 0.25s ease;
+    backdrop-filter: blur(12px);
+}
 
-        .social-icons a {
-            color: #888;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: var(--text-color);
-        }
+.link-btn i {
+    position: absolute;
+    left: 18px;
+    font-size: 18px;
+}
 
-        /* Logo/Footer */
-        .footer {
-            margin-top: 40px;
-            font-size: 12px;
-            color: #444;
-        }
-    </style>
+/* INSTAGRAM */
+.instagram {
+    background: linear-gradient(135deg,
+        rgba(253,29,29,0.15),
+        rgba(225,48,108,0.15),
+        rgba(131,58,180,0.15)
+    );
+    border: 1px solid rgba(225,48,108,0.3);
+}
+
+.instagram:hover {
+    background: linear-gradient(135deg,
+        rgba(253,29,29,0.3),
+        rgba(225,48,108,0.3),
+        rgba(131,58,180,0.3)
+    );
+    box-shadow: 0 10px 30px rgba(225,48,108,0.25);
+    transform: translateY(-3px);
+}
+
+/* SPOTIFY */
+.spotify {
+    background: rgba(30,215,96,0.12);
+    border: 1px solid rgba(30,215,96,0.35);
+}
+
+.spotify:hover {
+    background: rgba(30,215,96,0.25);
+    box-shadow: 0 10px 30px rgba(30,215,96,0.25);
+    transform: translateY(-3px);
+}
+
+/* VSCO */
+.vsco {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.vsco:hover {
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.12);
+    transform: translateY(-3px);
+}
+
+.link-btn:active {
+    transform: scale(0.96);
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width:480px){
+    .container{
+        padding: 40px 16px;
+    }
+}
+</style>
 </head>
+
 <body>
+<div class="container">
 
-    <div class="container">
-        <img src="626618008_18037009976765601_4260636406530225801_n.jpg" alt="Burak Senyerli" class="profile-img">
-        
-        <h1>Burak Şenyerli</h1>
+    <img src="ab6761610000e5eb6eb26ecf6fd2913054b35311.jpg" 
+         alt="Burak Şenyerli" 
+         class="profile-img">
 
-        <a href="https://spotify.com" target="_blank" class="link-btn featured">
-            <i class="fab fa-spotify"></i>
-            En Yeni Şarkım "Au Revoir" Dinle
-        </a>
+    <h1>Burak Şenyerli</h1>
+    <p>git kendinden daha mutsuz bi' varlık bul ve moral ver</p>
 
-        <a href="https://instagram.com/buraksn" target="_blank" class="link-btn">
-            <i class="fab fa-instagram"></i>
-            Instagram
-        </a>
+    <a href="https://instagram.com/buraksenyerli" target="_blank" 
+       class="link-btn instagram">
+        <i class="fab fa-instagram"></i>
+        Instagram/buraksenyerli
+    </a>
 
-        <a href="https://youtube.com" target="_blank" class="link-btn">
-            <i class="fab fa-youtube"></i>
-            YouTube Kanalım
-        </a>
+    <a href="https://open.spotify.com/user/3mk9y38tvf0tc20aq1u0ivmg8" target="_blank" 
+       class="link-btn spotify">
+        <i class="fab fa-spotify"></i>
+        Spotify/burak
+    </a>
 
-        <a href="https://soundcloud.com" target="_blank" class="link-btn">
-            <i class="fab fa-soundcloud"></i>
-            SoundCloud
-        </a>
+    <a href="https://vsco.co/buraksenyerlii" target="_blank" 
+       class="link-btn vsco">
+        <i class="fa-solid fa-camera-retro"></i>
+        VSCO/burak
+    </a>
 
-        <a href="https://vsco.co/buraksn" target="_blank" class="link-btn">
-                <i class="fa-solid fa-camera-retro"></i>
-                VSCO
-         </a>
-
-        <a href="https://github.com/buraksnn" target="_blank" class="link-btn">
-            <i class="fab fa-github"></i>
-            GitHub Projelerim
-        </a>
-
-        <a href="mailto:burakksenyerli@gmail.com" class="link-btn">
-            <i class="fas fa-envelope"></i>
-            Bana Mail At
-        </a>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-        </div>
-
-        <div class="footer">
-            © 2026 Burak Senyerli
-        </div>
+    <div class="footer">
+        © 2026 Burak Şenyerli
     </div>
 
+</div>
 </body>
 </html>
