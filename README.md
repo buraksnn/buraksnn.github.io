@@ -1,1 +1,0 @@
-# buraksnn.github.io
