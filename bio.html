@@ -137,17 +137,17 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.75rem;
     }
 
     .link-btn {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.5rem;
+      gap: 0.9rem;
+      padding: 0.95rem 1.4rem;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 11px;
       color: var(--text);
       text-decoration: none;
       font-size: 0.9rem;
@@ -181,17 +181,22 @@
     }
 
     .link-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       flex-shrink: 0;
       background: var(--subtle);
       position: relative;
       z-index: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .link-btn:hover .link-icon {
+      transform: scale(1.05);
     }
 
     .link-title {
@@ -200,7 +205,9 @@
     }
 
     .link-sub {
-      display: none;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
     }
 
     .link-arrow {
@@ -246,10 +253,32 @@
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.07); border-radius: 10px; }
 
+    @media (max-width: 768px) {
+      .link-btn { padding: 0.9rem 1.3rem; gap: 0.85rem; }
+      .link-icon { width: 36px; height: 36px; border-radius: 8px; }
+    }
+
     @media (max-width: 640px) {
-      .container { padding: 3rem 1.25rem 2rem; }
+      .container { padding: 2.5rem 1.2rem 2rem; }
       .profile-name { font-size: 1.3rem; }
       .profile-avatar { width: 90px; height: 90px; font-size: 2.5rem; }
+      .link-btn { padding: 0.85rem 1.2rem; font-size: 0.85rem; gap: 0.8rem; }
+      .link-icon { width: 34px; height: 34px; }
+      .link-title { font-size: 0.85rem; }
+      .link-sub { font-size: 0.7rem; }
+      .back-link { font-size: 0.7rem; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 2rem 1rem 1.5rem; max-width: 100%; }
+      .profile-avatar { width: 80px; height: 80px; font-size: 2.2rem; margin-bottom: 1.2rem; }
+      .profile-name { font-size: 1.2rem; }
+      .profile-handle { font-size: 0.7rem; }
+      .link-btn { padding: 0.8rem 1.1rem; gap: 0.75rem; }
+      .link-icon { width: 32px; height: 32px; }
+      .link-title { font-size: 0.8rem; }
+      .link-sub { font-size: 0.65rem; }
+      .footer { font-size: 0.7rem; }
     }
   </style>
 </head>
@@ -274,6 +303,7 @@
         </div>
         <div class="link-content">
           <div class="link-title">Instagram</div>
+          <div class="link-sub">@buraksenyerli</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
@@ -284,6 +314,7 @@
         </div>
         <div class="link-content">
           <div class="link-title">Spotify</div>
+          <div class="link-sub">@buraksenyerli</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
@@ -294,6 +325,7 @@
         </div>
         <div class="link-content">
           <div class="link-title">VSCO</div>
+          <div class="link-sub">@buraksenyerli</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
@@ -304,6 +336,7 @@
         </div>
         <div class="link-content">
           <div class="link-title">Snapchat</div>
+          <div class="link-sub">@buraksenyerli</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
@@ -314,6 +347,7 @@
         </div>
         <div class="link-content">
           <div class="link-title">Web Sitesi</div>
+          <div class="link-sub">buraksenyerli.com</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
