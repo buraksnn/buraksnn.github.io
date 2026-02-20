@@ -1,0 +1,26 @@
+# Robots.txt - Google, Bing ve diğer search engine botları için
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /links.html
+Allow: /insta.html
+Allow: /assets/
+Disallow: /node_modules/
+Disallow: /.js
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://buraksenyerli.com/sitemap.xml
+
+# Crawl-delay (saniye cinsinden)
+Crawl-delay: 1
+
+# Request-rate
+Request-rate: 30/60

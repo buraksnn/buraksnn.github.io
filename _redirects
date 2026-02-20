@@ -1,0 +1,11 @@
+<!-- Network Optimization for GitHub Pages -->
+<!-- Add this to your deployment to optimize network requests -->
+
+# Add Cache-Control headers for GitHub Pages
+## Create a _headers file if using Netlify, or .htaccess for Apache
+
+# Redirect www to non-www (if needed - uncomment)
+# /articles/:id  /blog/:id  301
+
+# Preload critical resources
+<!-- Already configured in index.html header -->
