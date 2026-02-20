@@ -98,6 +98,13 @@
       font-family: 'Syne', sans-serif;
       font-size: 2.8rem;
       font-weight: 800;
+    }
+
+    .profile-avatar:has(img) {
+      background: transparent;
+    }
+
+    .profile-avatar:not(:has(img)) {
       background: linear-gradient(135deg, var(--c1), var(--c2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -290,7 +297,7 @@
 
     <div class="profile">
       <div class="profile-avatar">
-        <img src="/assets/burak-senyerli-1.jpg" alt="Burak Şenyerli" />
+        <img src="/assets/burak-senyerli-1.JPG" alt="Burak Şenyerli" />
       </div>
       <div class="profile-name">Burak Şenyerli</div>
       <div class="profile-handle">@buraksenyerli</div>
