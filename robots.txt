@@ -2,13 +2,13 @@
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /links.html
-Allow: /insta.html
 Allow: /assets/
 Disallow: /node_modules/
 Disallow: /.js
 Disallow: /bio
 Disallow: /bio.html
+Disallow: /links.html
+Disallow: /insta.html
 
 # Google Bot
 User-agent: Googlebot

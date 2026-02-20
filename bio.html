@@ -2,13 +2,197 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=/insta.html" />
-  <title>Redirect - Burak Şenyerli</title>
-  <script>
-    window.location.href = '/insta.html';
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#060608" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Burak Şenyerli | Sosyal Medya Bağlantıları</title>
+  <meta name="description" content="Burak Şenyerli'nin tüm sosyal medya hesaplarına ulaşın. Instagram, YouTube, TikTok, Twitter ve GitHub." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://buraksenyerli.com/bio" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Burak Şenyerli | Sosyal Medya" />
+  <meta property="og:url" content="https://buraksenyerli.com/bio" />
+  <meta property="og:image" content="https://buraksenyerli.com/assets/burak-senyerli-1.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #060608;
+      color: #f0eff5;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 2.5rem;
+      background: rgba(6, 6, 8, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #f0eff5;
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    .nav-logo:hover { opacity: 1; }
+    .nav-back {
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: rgba(240, 239, 245, 0.4);
+      text-decoration: none;
+      font-size: 0.77rem;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(14px);
+      transition: all 0.25s;
+    }
+    .nav-back:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #f0eff5;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: rgba(240, 239, 245, 0.6);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+    }
+    .links-container {
+      display: grid;
+      gap: 1rem;
+    }
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      text-decoration: none;
+      color: #f0eff5;
+      transition: all 0.3s ease;
+    }
+    .link-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(4px);
+    }
+    .link-item .icon { font-size: 2rem; min-width: 3rem; text-align: center; }
+    .link-item .content { flex: 1; }
+    .link-item .platform {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .link-item .description { font-size: 0.9rem; color: rgba(240, 239, 245, 0.5); }
+    .link-item .arrow { font-size: 1.5rem; opacity: 0; transition: all 0.3s ease; }
+    .link-item:hover .arrow { opacity: 1; transform: translateX(4px); }
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: rgba(240, 239, 245, 0.4);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.25rem; }
+      main { padding: 2rem 1.25rem; }
+      h1 { font-size: clamp(1.5rem, 7vw, 2.5rem); margin-bottom: 0.8rem; }
+      .subtitle { font-size: 1rem; margin-bottom: 2rem; }
+      .link-item { padding: 1.2rem; gap: 1rem; }
+      .link-item .icon { font-size: 1.5rem; min-width: 2.5rem; }
+      .nav-back { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
+    }
+  </style>
 </head>
 <body>
-  <p>Yönlendiriliyorsunuz... <a href="/insta.html">Buraya tıklayın</a></p>
+  <nav role="navigation" aria-label="Ana menü">
+    <a href="/" class="nav-logo" title="Ana sayfa">B. Şenyerli</a>
+    <a href="/" class="nav-back" title="Ana sayfaya dön">← Ana Sayfa</a>
+  </nav>
+
+  <main role="main" aria-label="Sosyal medya bağlantıları">
+    <h1>Bağlantılar</h1>
+    <p class="subtitle">Tüm sosyal medya hesaplarımı burada bulabilirsiniz. Takip etmeyi unutmayın!</p>
+
+    <div class="links-container">
+      <a href="https://www.instagram.com/buraksenyerli" target="_blank" rel="noopener" class="link-item" aria-label="Instagram">
+        <span class="icon">📸</span>
+        <div class="content">
+          <span class="platform">Instagram</span>
+          <span class="description">@buraksenyerli - Günlük fotograflar</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://www.youtube.com/@buraksenyerli" target="_blank" rel="noopener" class="link-item" aria-label="YouTube">
+        <span class="icon">🎥</span>
+        <div class="content">
+          <span class="platform">YouTube</span>
+          <span class="description">@buraksenyerli - Video içerikleri</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://www.tiktok.com/@buraksenyerli" target="_blank" rel="noopener" class="link-item" aria-label="TikTok">
+        <span class="icon">🎵</span>
+        <div class="content">
+          <span class="platform">TikTok</span>
+          <span class="description">@buraksenyerli - Kısa videolar</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://twitter.com/buraksenyerli" target="_blank" rel="noopener" class="link-item" aria-label="Twitter">
+        <span class="icon">𝕏</span>
+        <div class="content">
+          <span class="platform">Twitter/X</span>
+          <span class="description">@buraksenyerli - Güncellemeler</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://github.com/buraksnn" target="_blank" rel="noopener" class="link-item" aria-label="GitHub">
+        <span class="icon">💻</span>
+        <div class="content">
+          <span class="platform">GitHub</span>
+          <span class="description">@buraksnn - Kod projeleri</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Burak Şenyerli</p>
+  </footer>
 </body>
 </html>
