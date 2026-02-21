@@ -249,85 +249,14 @@
 
     .footer a:hover { color: var(--text); }
 
-    /* FAQ */
-    .faq-section {
+    .profile-avatar img {
       width: 100%;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: var(--subtle);
     }
-
-    .sec-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .faq-list { display: flex; flex-direction: column; gap: 0; width: 100%; }
-
-    .faq-item { border-top: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: 1px solid var(--border); }
-
-    .faq-q {
-      width: 100%;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-family: 'Syne', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-align: left;
-      padding: 1rem 0;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      transition: opacity 0.2s;
-    }
-
-    .faq-q:hover { opacity: 0.72; }
-
-    .faq-icon {
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      transition: transform 0.3s ease, border-color 0.3s;
-      line-height: 1;
-    }
-
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
-      border-color: rgba(255,255,255,0.22);
-    }
-
-    .faq-a {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.35s ease;
-    }
-
-    .faq-item.open .faq-a { grid-template-rows: 1fr; }
-
-    .faq-a-inner {
-      overflow: hidden;
-    }
-
-    .faq-a-text {
-      padding-bottom: 1rem;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.85rem;
-    }
-
-    .faq-a-text strong { color: rgba(240,239,245,0.78); font-weight: 500; }
 
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -370,7 +299,7 @@
 
     <div class="profile">
       <div class="profile-avatar">
-        <img src="/assets/burak-senyerli-1.jpg" alt="Burak Şenyerli" />
+        <img src="/assets/burak-senyerli-1.JPG" alt="Burak Şenyerli" loading="eager" fetchpriority="high" width="100" height="100" />
       </div>
       <div class="profile-name">Burak Şenyerli</div>
       <div class="profile-handle">@buraksenyerli</div>
@@ -437,57 +366,6 @@
       <a href="/">← Burak Şenyerli'yi daha fazla tanı</a>
     </div>
 
-    <div class="faq-section">
-      <h2 class="sec-title">Sorular</h2>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" onclick="tog(this)" aria-expanded="false">Burak Şenyerli kimdir?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <div class="faq-a-text">Burak Şenyerli, <strong>2002 doğumlu</strong>, Türkiye'den sosyal medya kişiliğidir. Ne influencer ne de marka elçisi — sadece internette var olan, kendi sitesini yapıp Google'da çıkmaya çalışan biri. <strong>Instagram, YouTube, TikTok ve Twitter'da</strong> aktif.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="tog(this)" aria-expanded="false">Burak Şenyerli kaç yaşında?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <div class="faq-a-text"><strong>2002 doğumludur</strong>, yani şu an 24 yaşında. Doğum günü geçtiyse bir fazlası. Kurucusu buraksnn adında GitHub kullanıcısıdır.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="tog(this)" aria-expanded="false">Burak Şenyerli nereli?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <div class="faq-a-text"><strong>Türkiye'den</strong>. Daha spesifik bilgi istemiyorsun değil mi — güzel bir yer, bu kadar yeter.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" onclick="tog(this)" aria-expanded="false">Burak Şenyerli ne iş yapar?
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <div class="faq-a-text">Burak'ın mesleği için <strong>net bir kategori yok</strong>. <strong>Content creator</strong> ve <strong>sosyal medya kişiliği</strong> olarak aktif, çeşitli şeylerle ilgileniyor. GitHub'ta da projelerle uğraşmaktadır.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
     const cv = document.getElementById('canvas');
     const cx = cv.getContext('2d');
@@ -528,20 +406,6 @@
     orbs = mkOrbs();
     draw();
     window.addEventListener('resize', () => { resize(); orbs = mkOrbs(); });
-
-    /* FAQ toggle */
-    function tog(btn) {
-      const item = btn.closest('.faq-item');
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-      });
-      if (!wasOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    }
   </script>
 </body>
 </html>
